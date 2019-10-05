@@ -12,7 +12,7 @@ def enter(a):
                 control = True
             elif x.isdigit():
                 control_int.append(1)
-    if (control == True) and (len(control_int) <= 5):
+    if (control == True) and (len(control_int) >= 5):
         print('Your password is strong.')
     else:
         print('Your password is not strong enough.')
