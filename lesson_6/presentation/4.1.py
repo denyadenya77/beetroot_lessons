@@ -18,3 +18,23 @@ def enter(a):
         print('Your password is not strong enough.')
 
 enter(password)
+
+# while
+
+def enter1(a):
+    control = None
+    control_int = list()
+    if len(a) >= 10:
+        i = 0
+        while i < len(a):
+            if a[i].isupper():
+                control = True
+            elif a[i].isdigit():
+                control_int.append(1)
+            i += 1
+    if (control == True) and (len(control_int) >= 5):
+        print('Your password is strong.')
+    else:
+        print('Your password is not strong enough.')
+
+enter1(password)
