@@ -11,35 +11,19 @@ with open(file_address, 'r') as file_object:
 
 list_of_str = text.split('\n') # возвращает список строк
 list_of_str.pop()
-print(list_of_str)
 
 
 the_dict = {}
-i = 0
 
-for x in list_of_str:
-
-    # находит все пустые строки в списке
-#     if x == '':
-#         i += 1
-# print(i)
-
-    # обрабатывает первую пустую строку - послед. игнор.
-    # k = list_of_str.index(x) + 1
-    # v = x
-    # the_dict.update({k: v})
-
-
-
-    # обрабатывает первую пустую строку - послед. игнор.
-    # if len(x) > 0:
-    #     k = list_of_str.index(x) + 1
-    #     v = len(x)
-    #     the_dict.update({k: v})
-    # elif len(x) == 0:
-    #     k = list_of_str.index(x) + 1
-    #     v = None
-    #     the_dict.update({k: v})
+for index, x in enumerate(list_of_str, 1):
+    if len(x) > 0:
+        k = index
+        v = len(x)
+        the_dict.update({k: v})
+    elif len(x) == 0:
+        k = index
+        v = None
+        the_dict.update({k: v})
 
 print(the_dict)
 
